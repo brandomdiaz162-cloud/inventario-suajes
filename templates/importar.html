@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Importar Excel - Inventario de Suajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #1a5276;
+        }
+        form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input[type="file"] {
+            padding: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #1a5276;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #154360;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📂 Importar archivo Excel</h1>
+    <form action="/importar" method="POST" enctype="multipart/form-data">
+        <input type="file" name="archivo" accept=".xlsx,.xls,.csv" required><br>
+        <button type="submit">Importar</button>
+    </form>
+    <br><br>
+    <a href="/">← Volver al inicio</a>
+
+</body>
+</html>

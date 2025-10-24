@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-3">Nuevo Suaje</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label>Código</label>
+        <input type="text" class="form-control" name="codigo" required>
+    </div>
+    <div class="mb-3">
+        <label>Descripción</label>
+        <input type="text" class="form-control" name="descripcion" required>
+    </div>
+    <div class="mb-3">
+        <label>Ubicación</label>
+        <input type="text" class="form-control" name="ubicacion" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
